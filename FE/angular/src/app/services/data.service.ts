@@ -28,8 +28,18 @@ interface MovieDetails extends Movie {
   Writer: string;
 }
 
+export interface Error {
+  status: string;
+  message: string;
+}
+
 export interface MovieComplete extends MovieDetails {
   Year: number;
+  errorMessage?: string;
+}
+
+export interface MovieCompleteError {
+  errorMessage?: string;
 }
 
 export interface MovieData {
